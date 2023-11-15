@@ -8,13 +8,16 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="usuarios")
+@Table(name="access")
 public class UsuarioModel {
    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="idUsuario")
+    @Column(name="userid")
     public int idUsuario;
+
+    @Column(name="fullname")    
+    public String fullname;
 
     @Column(name="username")    
     public String username;
@@ -44,6 +47,14 @@ public class UsuarioModel {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getFullname() {
+        return fullname;
+    }
+
+    public void setFullname(String fullname) {
+        this.fullname = fullname;
     }
 
 }
