@@ -24,5 +24,8 @@ public class AuthService {
     public UsuarioModel Update(UsuarioModel usuario) {
         return authRepository.save(usuario);
     }
+    public void Delete(int idUsuario) {
+        authRepository.deleteById(idUsuario);
+    }
    
 }
