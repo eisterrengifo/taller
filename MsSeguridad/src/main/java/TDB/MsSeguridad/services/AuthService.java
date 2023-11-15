@@ -1,7 +1,7 @@
 package TDB.MsSeguridad.services;
 
 import java.util.List;
-// import java.util.Optional;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -27,5 +27,8 @@ public class AuthService {
     public void Delete(int idUsuario) {
         authRepository.deleteById(idUsuario);
     }
+    public Optional<UsuarioModel> FindById(int idUsuario) {
+        return authRepository.findById(idUsuario);
+     }
    
 }
