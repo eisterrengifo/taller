@@ -44,7 +44,7 @@ public class AuthController {
           authService.Delete(idUsuario);      
      }
      @GetMapping("/{idUsuario}")
-    public ResponseEntity<UsuarioModel> obtenerUsuarioPorId(@PathVariable String idUsuario) {
+public ResponseEntity<UsuarioModel> obtenerUsuarioPorId(@PathVariable String idUsuario) {
     try {
         int id = Integer.parseInt(idUsuario);
         Optional<UsuarioModel> usuario = authService.FindById(id);
